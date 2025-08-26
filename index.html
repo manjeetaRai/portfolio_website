@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Syndicate Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bookman+Old+Style&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: #1a120b;
+      color: #d0b084;
+      font-family: 'Bookman Old Style', serif;
+    }
+    header {
+      background: url('mafia-banner.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      position: relative;
+      color: #e7c29b;
+    }
+    header h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 4rem;
+      text-shadow: 2px 2px 4px #000;
+      margin: 0;
+    }
+    section.projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .project-tile {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .project-tile img {
+      width: 100%; height: auto;
+      display: block;
+      filter: grayscale(80%) brightness(70%) sepia(20%);
+      transition: transform 0.5s ease;
+    }
+    .project-tile:hover img {
+      transform: scale(1.1);
+      filter: none;
+    }
+    .project-tile .overlay {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; padding: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #f0d8a8;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .project-tile:hover .overlay {
+      transform: translateY(0);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      background: #0e0a08;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Syndicate</h1>
+  </header>
+
+  <section class="projects">
+    <div class="project-tile">
+      <img src="project1.jpg" alt="Project 1">
+      <div class="overlay">Project One – “The Hit Job”</div>
+    </div>
+    <div class="project-tile">
+      <img src="project2.jpg" alt="Project 2">
+      <div class="overlay">Project Two – “Silent Deal”</div>
+    </div>
+    <div class="project-tile">
+      <img src="project3.jpg" alt="Project 3">
+      <div class="overlay">Project Three – “Underworld Web”</div>
+    </div>
+    <!-- Add more tiles as needed -->
+  </section>
+
+  <footer>
+    &copy; 2025 The Syndicate. All deals handled with discretion.
+  </footer>
+
+</body>
+</html>
